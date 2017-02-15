@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript Slider</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="CSS/myStyle.css">
+	</head>
+	<body>
+		<div id="slider-container">
+			<div class="my_slide">
+				<img src="CSS/Images/image1.jpg" alt="">
+			</div>
+			
+			<div class="my_slide">
+				<img src="CSS/Images/image2.jpg" alt="">
+			</div>
+			
+			<div class="my_slide">
+				<img src="CSS/Images/image3.jpg" alt="">
+			</div>
+			
+			<div class="my_slide"> 
+				<img src="CSS/Images/image4.jpg" alt="">
+			</div>
+			<img id="prev" class="nav" src="CSS/Images/left_arow.png" onClick="Prev(-1)" alt="">
+			<img id="next" class="nav" src="CSS/Images/right_arrow.png" onClick="Next(+1)" alt="">
+		</div>
+		<div id="circle-container">
+			<span class="small_image active" onclick="Show(1)">
+				<img src="CSS/Images/image1.jpg" alt="">
+			</span>
+			<span class="small_image" onclick="Show(2)">
+				<img src="CSS/Images/image2.jpg" alt="">
+			</span>
+			<span class="small_image" onclick="Show(3)">
+				<img src="CSS/Images/image3.jpg" alt="">
+			</span>
+			<span class="small_image" onclick="Show(4)">
+				<img src="CSS/Images/image4.jpg" alt="">
+			</span>
+		</div>
+		<script src="JS/myJS.js"></script>
+	</body>
+</html>

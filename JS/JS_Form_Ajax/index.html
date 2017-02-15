@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="CSS/form.css">
+		<link rel="stylesheet" type="text/css" href="CSS/calendar.css">
+		<meta charset="utf-8">
+		<title>Form_Ajax</title>
+	</head>
+	<body>
+		<div id="container">
+			<form id="my-form">
+				<table id="form">
+					<tr>
+						<td class="title">Username:</td>
+						<td class="input"><input type="text" class="txt" name="username"></td>
+						<td class="error"><span id="username-error"></span></td>
+					</tr>
+					<tr>
+						<td class="title">Password:</td>
+						<td class="input"><input type="password" class="txt" name="password"></td>
+						<td><span class="error" id="password-error"></span></td>
+					</tr>
+					<tr>
+						<td class="title">Email:</td>
+						<td class="input"><input type="text" class="txt" name="email"></td>
+						<td><span class="error" id="email-error"></span></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="input">
+						<input type="text" id="txt-calendar" name="birthday" readonly onclick="showCalendar()" 
+							ondblclick="hideCalendar()"></td>
+					</tr>
+					<tr>
+						<td class="title">Birhday:</td>
+						<td class="input">
+							<div id="calendar-panel">
+								<table style="width: 340px" id="calendar">
+									<tr>
+										<td class="btn" onClick="prevY()"><a>&#8647;</a></td>
+										<td class="btn" onClick="prevM()"><a>&#8592;</a></td>
+										<td id="my-th"><select id ="month" onchange="getMonth()"></select></td>
+										<td><select id ="year" onchange="getYear()"></select></td>
+										<td class="btn" onClick="nextM()"><a>&#8594;</a></td>
+										<td class="btn" onclick="nextY()"><a>&#8649;</a></td>
+									</tr>
+								</table>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<button class="form_btn" onclick="validateForm()">Submit</button>
+							<button class="form_btn" onclick="refreshForm()">Refresh</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<script src="JS/calendar.js"></script>
+		<script src="JS/form.js"></script>
+	</body>
+</html>
