@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Datepicker functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "JS/jquery-3.1.1.js"></script>
+      <script src = "JS/jquery-ui-1.12.1/jquery-ui.js"></script>
+      
+      <!-- Javascript -->
+      <script>
+        $( function() {
+    		$("#datepicker").datepicker({
+      			changeMonth: true,
+      			changeYear: true,
+      			showOtherMonths: true,
+      			selectOtherMonths: true
+    		});
+      		$( "#datepicker" ).datepicker( "option", "dateFormat", "dd/mm/yy" );
+  		});
+      </script>
+   </head>
+   
+   <body>
+      <!-- HTML --> 
+      <p>Enter Date: <input type="text" id="datepicker"></p>
+   </body>
+</html>
+ 
+</body>
+</html>
