@@ -1,0 +1,1 @@
+http://www.redips.net/php/write-to-log-file/
