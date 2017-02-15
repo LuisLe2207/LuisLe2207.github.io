@@ -1,0 +1,42 @@
+#calendar_panel #calendar td, tr{
+    border-collapse: collapse;
+	border: 1px solid black;
+}
+/* ID */
+#txt_Calendar {
+	height: 25px;
+	width: 350px;
+	margin-left: 5px;
+	background: white url(Images/calendar_icon.png) no-repeat right top ;
+	background-size: 25px 25px;
+}
+
+#calendar_panel {
+	width: 350px;
+	margin-left: 5px;
+}
+
+#month {
+	width: 100px;
+}
+
+#year {
+	width: 55px;
+}
+
+#day_lable {
+	background: grey;
+	color: red;
+	border: 1px solid black;
+	font-size: large;
+	font-weight: bold;
+}
+
+/* Class */
+.btn {
+	background: #A9CCE3;
+	cursor: pointer;
+}
+.day {
+	background: #FBFCFC;
+}
