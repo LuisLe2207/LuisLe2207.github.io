@@ -1,5 +1,5 @@
-
-function validateForm() {
+var submit = document.getElementById("btn-submit");
+submit.addEventListener("click", function(event) {
 	event.preventDefault();
 	// Get form input value
 	var userName = document.forms["my-form"]["username"].value;
@@ -26,14 +26,10 @@ function validateForm() {
 	if (check) {
 		submitForm();
 	} 
-}
+});
 
-// Clear all textbox
-function refreshForm() {
-	document.getElementById("my-form").reset();
-}
 // Submit Form
-function submitForm() {
+function submitForm(event) {
     var myForm = document.forms["my-form"];
 
 	//var action = myForm.getAttribute("action"); //Get Form Action URL
