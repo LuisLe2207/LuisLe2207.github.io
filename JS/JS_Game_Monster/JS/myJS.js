@@ -408,7 +408,7 @@ controlBlock.addEventListener("click", function(event) {
 
 	// Boom Button
 	if (posX > 110 && posX < 160 && posY > 75 && posY < 125) {
-		if (booleanBoom) {
+		if (booleanBoom && isRunning) {
 			boomToKill();
 			playerBoom--;
 			console.log("Boom");
