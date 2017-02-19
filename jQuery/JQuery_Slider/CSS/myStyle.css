@@ -2,23 +2,23 @@ body {
 	margin: 0;
 }
 
-#slider_container .my_Slide img {
+#slider-container .my_slide img {
 	width: 100%;
 }
 
-#circle_container .small_Image img {
+#circle-container .small_image img {
 	width: 100%;
 	height: 100%;
 }
 
 /* Id */
-#slider_container {
+#slider-container {
 	width: 1000px;
 	margin: auto;
 	position: relative;
 }
 
-#circle_container {
+#circle-container {
 	margin: auto;
 	text-align: center;
 	position: relative;
@@ -32,7 +32,7 @@ body {
 	right: 0px;
 }
 /* Class */
-.my_Slide {
+.my_slide {
 	display: none;
 	animation: fadeIn 5s linear;
 }
@@ -44,14 +44,18 @@ body {
 	top: 45%;
 }
 
-.small_Image {
+.small_image {
 	width: 100px;
 	height: 57px;
 	display: inline-block;
 }
 
+.active {
+	border: solid red;
+}
+
 /* Animation */
-.small_Image:hover {
+.small_image:hover {
 	animation:  hoverOn 2s;
 	animation-fill-mode: forwards;
 	border: solid red;
