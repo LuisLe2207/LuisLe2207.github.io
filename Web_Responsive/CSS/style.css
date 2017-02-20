@@ -250,6 +250,10 @@ a {
 .content1_p {
 	margin-bottom: 20px; 
 }
+
+.content1_p p {
+	line-height:  20px; 
+}
 .box {
 	width: 100%;
 	position: relative;
@@ -266,6 +270,7 @@ a {
 	margin: 5px 10px;
 	min-height: 124px;
 	max-height: 260px;
+	line-height: 20px;
 }
 
 .box1 a {
@@ -355,6 +360,9 @@ dl.index dd {
 	margin-bottom: 10px;
 	text-align: left;
 }
+.aside_p_1 p {
+	line-height: 20px;
+}
 
 .aside_map {
 	width: 100%;
@@ -376,11 +384,11 @@ dl.index dd {
 .menu_footer_1 {
 	float: left;
 	max-width: 350px;
-	max-height: 
+	width: 100%;
 }
 .menu_footer_2 {
 	float: left;
-	margin-left: 40px;
+	margin-left: 30px;
 	height: auto;
 	max-width: 300px;
 	width: 100%;
@@ -393,14 +401,16 @@ dl.index dd {
 	height: auto;
 	max-width: 178px;
 	margin-left: 30px;
+	width: 100%;
 }
 .menu_footer_2 ul {
 	float: left;
 	font-size: 14px;
-	max-width: 150px;
+	max-width: 130px;
 	width: 100%;
 	display: inline-block;
 	vertical-align: top;
+	line-height: 20px;
 }
 .menu_footer_1 p {
 	line-height: 1.6;
@@ -412,10 +422,16 @@ div.menu_footer_2 ul li{
 div.menu_footer_2 ul li a {
 	background: url("../Images/footer_bullet.png") no-repeat left center;
 	padding-left: 15px;
+	text-decoration: none;
+}
+
+div.menu_footer_2 ul li a:hover {
+	text-decoration: underline;
 }
 .menu_footer_3 ul {
 	padding: 15px;
 	font-size: 13px;
+	line-height: 17px;
 }
 .menu_footer_3 .li_1 a {
 	background: url("../Images/footer_bullet_2.png") no-repeat left center;
