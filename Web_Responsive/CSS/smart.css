@@ -93,22 +93,9 @@
 	.content1_p {
 		margin: 5px;
 	}
-}
 
-/*@media screen and (min-width: 768px) and (max-width: 960px) {
-	.footer {
-		width: auto;
+	.subNav a{
+		background:none !important;
 	}
 
-	.copyright {
-		width: auto;
-	}
-
-	.nav {
-		max-width: 980px;
-		min-width: 980px;
-	}
-	body {
-		margin: 0px auto;
-	}*/
 }

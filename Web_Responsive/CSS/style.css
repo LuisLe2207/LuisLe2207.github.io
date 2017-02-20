@@ -160,7 +160,8 @@ a {
 	background: url("../Images/bg_menu_sub.jpg") no-repeat center center;
 }
 
-.menu ul li a.menu_1:hover img, 
+.menu ul li a.menu_1:hover img,
+.menu ul li a.menu_1:hover img,
 .menu ul li a.menu_2:hover img, 
 .menu ul li a.menu_3:hover img, 
 .menu ul li a.menu_4:hover img, 
@@ -177,22 +178,22 @@ a {
 .menu ul li.menu_1 a.active img {
 	display: none;
 }
-.menu ul li a.menu_2:hover {
+.menu ul li a.menu_2:hover, .menu ul li.menu_2 a.active {
 	background: url("../Images/menu_2_hover.jpg") no-repeat center center;
 }
-.menu ul li a.menu_3:hover {
+.menu ul li a.menu_3:hover, .menu ul li.menu_3 a.active {
 	background: url("../Images/menu_3_hover.jpg") no-repeat center center;
 }
-.menu ul li a.menu_4:hover {
+.menu ul li a.menu_4:hover, .menu ul li.menu_4 a.active {
 	background: url("../Images/menu_4_hover.jpg") no-repeat center center;
 }
-.menu ul li a.menu_5:hover {
+.menu ul li a.menu_5:hover, .menu ul li.menu_5 a.active {
 	background: url("../Images/menu_5_hover.jpg") no-repeat center center;
 }
-.menu ul li a.menu_6:hover {
+.menu ul li a.menu_6:hover, .menu ul li.menu_6 a.active {
 	background: url("../Images/menu_6_hover.jpg") no-repeat center center;
 }
-.menu ul li a.menu_7:hover {
+.menu ul li a.menu_7:hover, .menu ul li.menu_7 a.active {
 	background: url("../Images/menu_7_hover.jpg") no-repeat center center;
 }
 /* End Nav block */
