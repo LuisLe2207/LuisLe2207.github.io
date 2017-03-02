@@ -1,7 +1,0 @@
-[08/Feb/2017:11:32:02] (demo) Test message1
-[08/Feb/2017:11:32:02] (demo) Test message2
-[08/Feb/2017:11:32:02] (demo) Test message3
-[08/Feb/2017:11:32:02] (demo) Test message3
-[08/Feb/2017:11:32:02] (demo) Test message3
-[08/Feb/2017:11:32:02] (demo) Test message3
-[08/Feb/2017:11:32:02] (demo) Test message3
