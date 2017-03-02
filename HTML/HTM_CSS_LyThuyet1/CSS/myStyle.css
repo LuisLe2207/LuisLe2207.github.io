@@ -1,0 +1,118 @@
+* {
+	margin: auto;
+	padding: auto;
+	font-family: Georgia, serif;
+}
+
+ul {
+
+	list-style-type: none;
+}
+
+ul li::before {
+    content: url(Images/star.gif);
+    margin-right: 6px;
+}
+
+p {
+	padding: 0px 0px;
+}
+
+h2 {
+	text-align: center;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+
+#container #comment-block img {
+	float: left;
+	clear: none;
+	margin-right: 10px;
+}
+
+.post p {
+	margin-bottom: 5px;
+	font-size: 15px;
+}
+
+#container #your-comment table textarea {
+	width: 98%;
+}
+
+#player-info p {
+	font-size: 14px;
+}
+
+
+/* ID */
+#container {
+	width: 500px;
+	height: 100%;
+	border: 1px solid #ECECEC;
+}
+
+#player-title {
+	height: 25px;
+	font-weight: bold;
+	line-height: 25px;
+	background: url(Images/title_background.gif) repeat-x;
+}
+
+#fact-title {
+	height: 25px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 2px;
+	font-weight: bold;
+	line-height: 25px;
+}
+
+#player-profile {
+	height: 100px;
+}
+
+#avatar {
+	margin: 5px 5px;
+	float: left;
+}
+
+#player-info {
+	float: left;
+	height: 90px;
+	width: 390px;
+	overflow: scroll;
+}
+
+#comment-block {
+	margin-top: 50px;
+}
+
+#your-comment {
+	margin-top: 20px;
+}
+
+/* Class */
+.comment {
+	background-color: #ECECEC;
+	padding: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.post {
+	padding-left: 20px;
+}
+
+.td1 {
+	width: 25%;
+	font-size: 14px;
+}
+
+.td2 {
+	width: 75%;
+}
+
+
