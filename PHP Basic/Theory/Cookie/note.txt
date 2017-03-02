@@ -1,0 +1,7 @@
+﻿1. Cookie là gì, nó hoạt động ở đâu?
+- Cookie thường được dùng để lưu trữ các tùy chọn riêng của trang web từng user, 
+nó là một file nhỏ được Server chỉ định lưu trữ trên máy tính của Client và PHP có thể truy xuất tới được. 
+Và để sử dụng được Cookie thì trình duyệt phải hỗ trợ chức năng này, nếu không thì Cookie trở nên vô dụng.
+- Cookie sẽ không bị mất khi bạn đóng ứng dụng, nó phụ thuộc vào thời gian sống mà bạn thiết lập cho nó.
+Ví dụ bạn thiết lập Cookie lưu trữ thông tin đăng nhập trong vòng 15 phút thì sau 15 phút 
+mà bạn không có một thao tác thay đổi trên nó thì Cookie của bạn sẽ bị chết. Đây chính là sự lợi hại của việc sư dụng Cookie.
