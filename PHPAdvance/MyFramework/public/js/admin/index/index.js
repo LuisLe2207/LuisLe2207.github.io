@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	// Get alert div
+	var errorDiv = $(".alert");
 	// Change mouse cursor to pointer when hover inside table
 	$('table').children('tbody').css('cursor', 'pointer');
 	// Add click listener to each table row
@@ -33,6 +35,7 @@ $(document).ready(function() {
 	});
 	// Add click listener to insert button, and insert record when click
  	$('#btn-insert').click(function(event) {
+ 		errorDiv.empty();
  		// Prevent button default action 
  		event.preventDefault();
  		// Set input book id value to ''. Db using auto increment. 
@@ -51,13 +54,19 @@ $(document).ready(function() {
 					// Reload page
 					window.location.href = JSON.parse(response).url;
 				} else {
-					alert("Insert failed!");
+					var errors = JSON.parse(response).errors;
+					var error = "";
+					for (var key in errors) {
+						error += "<p>" + errors[key] + "</p>" ;
+					}
+					errorDiv.append(error);
 				}
 			}
 		});
  	});
  	// Add click listener to update button, and update record when click
  	$('#btn-update').click(function(event) {
+ 		errorDiv.empty();
  		// Prevent button default action 
  		event.preventDefault();
  		// Get data from form
@@ -74,7 +83,12 @@ $(document).ready(function() {
 					// Reload page
 					window.location.href = JSON.parse(response).url;
 				} else {
-					alert("Update failed!");
+					var errors = JSON.parse(response).errors;
+					var error = "";
+					for (var key in errors) {
+						error += "<p>" + errors[key] + "</p>" ;
+					}
+					errorDiv.append(error);
 				}
 			}
 		});

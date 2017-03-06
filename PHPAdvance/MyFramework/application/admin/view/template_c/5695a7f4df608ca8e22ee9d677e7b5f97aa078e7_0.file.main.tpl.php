@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-01 11:22:48
+/* Smarty version 3.1.30, created on 2017-03-06 15:28:47
   from "C:\xampp\htdocs\PHP\Advance\MyFramework\application\admin\view\template\main.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b64c989cee93_06133145',
+  'unifunc' => 'content_58bd1dbf6ee550_65682907',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5695a7f4df608ca8e22ee9d677e7b5f97aa078e7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\PHP\\Advance\\MyFramework\\application\\admin\\view\\template\\main.tpl',
-      1 => 1488342153,
+      1 => 1488788828,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b64c989cee93_06133145 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58bd1dbf6ee550_65682907 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -319,6 +319,9 @@ function content_58b64c989cee93_06133145 (Smarty_Internal_Template $_smarty_tpl)
 		</nav>
 	<div class="row">
 		<div class="col-xs-12">
+			<div class="alert">
+				
+			</div>
 			<form id="book-form" method="POST">
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
@@ -334,8 +337,8 @@ function content_58b64c989cee93_06133145 (Smarty_Internal_Template $_smarty_tpl)
 						name="Book[book_author]" id="txt-book-author">
 				</div>
 				<div class="text-center">
-					<input type="submit" class="btn btn-success btn-submit" id="btn-insert" value="Insert">
-					<input type="submit" class="btn btn-success btn-submit" id="btn-update" value="Update">
+					<input type="submit" class="btn btn-success btn-submit" id="btn-insert" value="Insert" name="btnInsert">
+					<input type="submit" class="btn btn-success btn-submit" id="btn-update" value="Update" name="btnUpdate">
 				</div>
 			</form>
 			</div>
@@ -370,7 +373,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 				    					<td>
 				    					<input type="button" class="btn btn-success btn-submit btn-delete" 
 				    					value="Delete" id="book-<?php echo $_smarty_tpl->tpl_vars['item']->value->book_id;?>
-"></td>
+" name="btnDelete"></td>
 				    				</tr>
 								<?php
 }

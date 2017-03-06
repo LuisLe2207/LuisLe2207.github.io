@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-01 14:11:53
+/* Smarty version 3.1.30, created on 2017-03-06 08:46:16
   from "C:\xampp\htdocs\PHP\Advance\MyFramework\application\default\view\template\main.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b674399acb90_48149572',
+  'unifunc' => 'content_58bcbf68348ff3_08908539',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '24c91c8381fadc74a2c61af80298bf261333e719' => 
     array (
       0 => 'C:\\xampp\\htdocs\\PHP\\Advance\\MyFramework\\application\\default\\view\\template\\main.tpl',
-      1 => 1488255542,
+      1 => 1488764774,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b674399acb90_48149572 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58bcbf68348ff3_08908539 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
@@ -68,7 +68,7 @@ function content_58b674399acb90_48149572 (Smarty_Internal_Template $_smarty_tpl)
 		<div class="cl">&nbsp;</div>
 		<!-- Login-details -->
 		<div id="login-details">
-			<p>Welcome, <a href="<?php echo $_smarty_tpl->tpl_vars['baseUrl']->value;?>
+			<p><a href="<?php echo $_smarty_tpl->tpl_vars['baseUrl']->value;?>
 /admin" id="user">Login</a> .</p><p><a href="#" class="cart" ><img 
 			src="<?php echo $_smarty_tpl->tpl_vars['resourceUrl']->value;?>
 /images/default/cart-icon.png" alt="" /></a>Shopping Cart (0) <a href="#" class="sum">$0.00</a></p>

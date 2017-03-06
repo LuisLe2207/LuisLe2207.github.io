@@ -3,7 +3,7 @@
 	{
 		public function __construct($scenario = null) {
 			$this->scenario = $scenario;
-			parent::__construct('users');
+			parent::__construct('user');
 		}
 		/**
 		  * Check login
@@ -32,7 +32,9 @@
 		// Set rules for model attr
 		public function rules() {
 			return array(
-				array('username, password', 'required')
+				array('username, password', 'required'),
+				array('username', 'string', 'maxLength' => 20),
+				array('password', 'string', 'maxLength' => 20, 'minLength' => 4)
 				);
 		}
 		// Set lable for model attr

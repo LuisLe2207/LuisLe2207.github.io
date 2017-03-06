@@ -28,13 +28,24 @@
                     $user = new User('login');
                     $user->load(MyFramework_Request::post('User'));
                     // Check login 
-                    if($user->validate() && $user->login()){
+                    if($user->validate() && $user->login()) {
                         // Success => admin page
                         $this->redirect(MyFrameworkBase::$baseUrl);
-                        exit;
+                        exit;   
                     } else {
-                        // Show error
-                        $this->view->assign('error', 'Wrong username or password.');
+                        //Show error
+                        $message = "";
+                        if ($user->validate() && !$user->login()) {
+                            $message = "Wrong username or password.";
+                        } 
+                        if (MyFramework_Request::post('User')['username'] 
+                            || MyFramework_Request::post('User')['password']
+                            || MyFramework_Request::post('User')) {
+                            foreach ($user->errors as $error) {
+                                $message .= "<p>" . $error . "</p>";
+                            }
+                        }
+                        $this->view->assign('error', $message);
                     }
                 }
                 $this->view->display('login.tpl');
@@ -55,7 +66,7 @@
                 echo json_encode(array('result' => '1', 'url' => MyFrameworkBase::$baseUrl));
                 exit;
             } else {
-                echo json_encode(array('result' => '0'));
+                echo json_encode(array('result' => '0', 'errors' => $this->book->errors));
                 exit;
             }
             
@@ -72,7 +83,7 @@
                 echo json_encode(array('result' => '1', 'url' => MyFrameworkBase::$baseUrl));
                 exit;
             } else {
-                echo json_encode(array('result' => '0', 'url' => MyFrameworkBase::$baseUrl));
+                echo json_encode(array('result' => '0', 'errors' => $this->book->errors));
                 exit;
             }
             
@@ -86,7 +97,7 @@
                     $this->book->delete($condition);
                     echo json_encode(array('result' => '1', 'url' => MyFrameworkBase::$baseUrl));
                 } else {
-                    echo json_encode(array('result' => '0', 'url' => MyFrameworkBase::$baseUrl));
+                    echo json_encode(array('result' => '0'));
                 }
             }
         }

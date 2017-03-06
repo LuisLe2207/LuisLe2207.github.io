@@ -283,6 +283,9 @@
 		</nav>
 	<div class="row">
 		<div class="col-xs-12">
+			<div class="alert">
+				
+			</div>
 			<form id="book-form" method="POST">
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
@@ -298,8 +301,8 @@
 						name="Book[book_author]" id="txt-book-author">
 				</div>
 				<div class="text-center">
-					<input type="submit" class="btn btn-success btn-submit" id="btn-insert" value="Insert">
-					<input type="submit" class="btn btn-success btn-submit" id="btn-update" value="Update">
+					<input type="submit" class="btn btn-success btn-submit" id="btn-insert" value="Insert" name="btnInsert">
+					<input type="submit" class="btn btn-success btn-submit" id="btn-update" value="Update" name="btnUpdate">
 				</div>
 			</form>
 			</div>
@@ -326,7 +329,7 @@
 				    					<td>{$item->book_author}</td>
 				    					<td>
 				    					<input type="button" class="btn btn-success btn-submit btn-delete" 
-				    					value="Delete" id="book-{$item->book_id}"></td>
+				    					value="Delete" id="book-{$item->book_id}" name="btnDelete"></td>
 				    				</tr>
 								{/foreach}		
 							</tbody>
