@@ -36,7 +36,7 @@
 			<div class="app-block">
 			<div class="app-form">
 				<div class="form-header">
-					<div class="app-brand"><span class="highlight">Simplio</span> Admin</div>
+					<div class="app-brand" name="lbTitle"><span class="highlight">Simplio</span> Admin</div>
 				</div>
 				<form id="login-form" method="POST">
 					<div class="alert">

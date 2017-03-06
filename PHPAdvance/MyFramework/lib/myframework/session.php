@@ -10,13 +10,16 @@
 		  * @return boolean
 		*/
 		public function open($savePath, $sessionName) {
-			$link = mysqli_connect("localhost", "root", "", "bookstore");
-			if ($link) {
-				$this->link = $link;
-				return true;
-			} else {
-				return false;
-			}
+			try {
+				$link = mysqli_connect("localhost", "root", "", "bookstore");
+				if ($link) {
+					$this->link = $link;
+					return true;
+				}
+			} catch (Exception $e) {
+				MyFramework_Log::write($e->getMessage());
+				throw new Exception($e->getMessage());
+			}	
 		}
 
 		/** 
@@ -24,21 +27,33 @@
 		  * @return boolean
 		*/
 		public function close() {
-			mysqli_close($this->link);
-			return true;
+			try {
+				mysqli_close($this->link);
+				return true;
+			} catch (Exception $e) {
+				MyFramework_Log::write($e->getMessage());
+				throw new Exception($e->getMessage());
+			}
+			
 		}
 		/**
 		  * @param string $sessionID read session value with session id input
 		  * @return string session data
 		*/
 		public function read($sessionID) {
-			$query = "SELECT Session_Data FROM sessions WHERE Session_ID = '".$sessionID."' AND Session_Expires > '".date('Y-m-d H:i:s')."'";
-			$result = mysqli_query($this->link, $query);
-			if ($row = mysqli_fetch_assoc($result)) {
-				return $row['Session_Data'];
-			} else {
-				return "";
+			try {
+				$query = "SELECT Session_Data FROM session WHERE Session_ID = '".$sessionID."' AND Session_Expires > '".date('Y-m-d H:i:s')."'";
+				$result = mysqli_query($this->link, $query);
+				if ($row = mysqli_fetch_assoc($result)) {
+					return $row['Session_Data'];
+				} else {
+					return "";
+				}
+			} catch (Exception $e) {
+				MyFramework_Log::write($e->getMessage());
+				throw new Exception($e->getMessage());
 			}
+			
 		}
 		/**
 		  * Create session with id and data
@@ -47,15 +62,21 @@
 		  * @return boolean 
 		*/
 		public function write($sessionID, $sessionData) {
-			$expriesDate = date('Y-m-d H:i:s');
-			$newExpiresDate = date('Y-m-d H:i:s', strtotime($expriesDate.' + 1hour'));
-			$query = "REPLACE INTO sessions SET Session_ID = '".$sessionID."', Session_Expires = '".$newExpiresDate."', Session_Data = '".$sessionData."'";
-			$result = mysqli_query($this->link, $query);
-			if ($result) {
-				return true;
-			} else {
-				return false;
+			try {
+				$expriesDate = date('Y-m-d H:i:s');
+				$newExpiresDate = date('Y-m-d H:i:s', strtotime($expriesDate.' + 1hour'));
+				$query = "REPLACE INTO session SET Session_ID = '".$sessionID."', Session_Expires = '".$newExpiresDate."', Session_Data = '".$sessionData."'";
+				$result = mysqli_query($this->link, $query);
+				if ($result) {
+					return true;
+				} else {
+					return false;
+				}
+			} catch (Exception $e) {
+				MyFramework_Log::write($e->getMessage());
+				throw new Exception($e->getMessage());
 			}
+			
 		}
 		/**
 		  * Delete session with input id
@@ -63,13 +84,18 @@
 		  * @return boolean 
 		*/
 		public function destroy($sessionID) {
-			$query = "DELETE FROM sessions WHERE Session_ID = '".$sessionID."'";
-			$result = mysqli_query($this->link, $query);
-			if ($result) {
-				return true;
-			} else {
-				return false;
-			}
+			try {
+				$query = "DELETE FROM session WHERE Session_ID = '".$sessionID."'";
+				$result = mysqli_query($this->link, $query);
+				if ($result) {
+					return true;
+				} else {
+					return false;
+				}
+			} catch (Exception $e) {
+				MyFramework_Log::write($e->getMessage());
+				throw new Exception($e->getMessage());
+			}	
 		}
 		/**
 		  * Delete old session data
@@ -77,13 +103,19 @@
 		  * @return boolean 
 		*/
 		public function gc($maxLifeTime) {
-			$query = "DELETE FROM sessions WHERE ((UNIX_TIMESTAMP(Session_Expires)
-			 + ".$maxLifeTime.") < ".$maxLifeTime.")";
-			$query = mysqli_query($this->link, $query);
-			if ($result) {
-				return true;
-			} else {
-				return false;
+			try {
+				$query = "DELETE FROM session WHERE ((UNIX_TIMESTAMP(Session_Expires)
+			 			  + ".$maxLifeTime.") < ".$maxLifeTime.")";
+				$query = mysqli_query($this->link, $query);
+				if ($result) {
+					return true;
+				} else {
+					return false;
+				}
+			} catch (Exception $e) {
+				MyFramework_Log::write($e->getMessage());
+				throw new Exception($e->getMessage());
 			}
+			
 		}
 	}

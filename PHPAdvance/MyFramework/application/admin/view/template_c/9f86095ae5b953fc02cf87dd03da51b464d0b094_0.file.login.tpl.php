@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-02 10:13:18
+/* Smarty version 3.1.30, created on 2017-03-06 09:51:08
   from "C:\xampp\htdocs\PHP\Advance\MyFramework\application\admin\view\template\login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b78dcee10f85_29202981',
+  'unifunc' => 'content_58bcce9ce99809_50071275',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f86095ae5b953fc02cf87dd03da51b464d0b094' => 
     array (
       0 => 'C:\\xampp\\htdocs\\PHP\\Advance\\MyFramework\\application\\admin\\view\\template\\login.tpl',
-      1 => 1488423169,
+      1 => 1488768305,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b78dcee10f85_29202981 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58bcce9ce99809_50071275 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -66,7 +66,7 @@ function content_58b78dcee10f85_29202981 (Smarty_Internal_Template $_smarty_tpl)
 			<div class="app-block">
 			<div class="app-form">
 				<div class="form-header">
-					<div class="app-brand"><span class="highlight">Simplio</span> Admin</div>
+					<div class="app-brand" name="lbTitle"><span class="highlight">Simplio</span> Admin</div>
 				</div>
 				<form id="login-form" method="POST">
 					<div class="alert">

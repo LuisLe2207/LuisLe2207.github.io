@@ -31,7 +31,7 @@
 		<div class="cl">&nbsp;</div>
 		<!-- Login-details -->
 		<div id="login-details">
-			<p>Welcome, <a href="{$baseUrl}/admin" id="user">Login</a> .</p><p><a href="#" class="cart" ><img 
+			<p><a href="{$baseUrl}/admin" id="user">Login</a> .</p><p><a href="#" class="cart" ><img 
 			src="{$resourceUrl}/images/default/cart-icon.png" alt="" /></a>Shopping Cart (0) <a href="#" class="sum">$0.00</a></p>
 		</div>
 		<!-- End Login-details -->
